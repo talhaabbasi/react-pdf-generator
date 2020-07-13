@@ -20,4 +20,8 @@ app.post("/create-pdf", (req, res, next) => {
   });
 });
 
+app.get("fetch-pdf", (req, res) => {
+  res.sendFile(`${__dirname}/result.pdf`);
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
